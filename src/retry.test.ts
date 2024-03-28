@@ -1,5 +1,5 @@
-import { timeoutPromise } from '@andrao/tools';
 import { beforeAll, jest } from '@jest/globals';
+import { timeoutPromise } from './timeoutPromise';
 
 /**
  * Mocks, globals
