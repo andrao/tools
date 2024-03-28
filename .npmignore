@@ -1,0 +1,8 @@
+# See https://docs.npmjs.com/cli/v10/using-npm/developers#keeping-files-out-of-your-package
+
+# dev
+.github
+.husky
+.vscode
+.prettierignore
+tsconfig.json
