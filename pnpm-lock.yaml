@@ -23,8 +23,8 @@ devDependencies:
     specifier: '*'
     version: 1.0.1
   '@andrao/tsconfig':
-    specifier: '*'
-    version: 0.1.0
+    specifier: ^1.0.0
+    version: 1.0.0
   '@jest/globals':
     specifier: ^29.7.0
     version: 29.7.0
@@ -152,8 +152,8 @@ packages:
       - ts-node
     dev: true
 
-  /@andrao/tsconfig@0.1.0:
-    resolution: {integrity: sha512-CUJ/19YsMX+FWswIzYDL45wbQl3E++eUYqS6welW/9D27JtMPGVu7ik861CrItgTdDdSttpR8MjzU2mFEJiRHw==}
+  /@andrao/tsconfig@1.0.0:
+    resolution: {integrity: sha512-xqGvm1kTLrk7GnuhyEaMYf3SfTU7cXqynlZ3Afa2DODog3fcCU7L6iiiaGbpjEyjtDeQqbVl5h3oimDc4Ya2Bw==}
     dev: true
 
   /@babel/code-frame@7.24.2:

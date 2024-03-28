@@ -22,6 +22,7 @@
         "./index": "./dist/index.js",
         "./isError": "./dist/isError.js",
         "./safe": "./dist/safe.js",
+        "./retry": "./dist/retry.js",
         "./timeAgo": "./dist/timeAgo.js",
         "./timeoutPromise": "./dist/timeoutPromise.js",
         "./trim": "./dist/trim.js",
@@ -30,7 +31,7 @@
         "./uuid": "./dist/uuid.js"
     },
     "scripts": {
-        "build": "rm -rf ./dist && tsc --tsBuildInfoFile dist/tsconfig.tsbuildinfo",
+        "build": "rm -rf ./dist && tsc --tsBuildInfoFile ./dist/tsconfig.tsbuildinfo",
         "format": "andrao-prettier --check .",
         "format:fix": "andrao-prettier --write .",
         "jest": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js",
@@ -92,7 +93,7 @@
     "devDependencies": {
         "@andrao/eslint": "*",
         "@andrao/prettier": "*",
-        "@andrao/tsconfig": "*",
+        "@andrao/tsconfig": "^1.0.0",
         "@jest/globals": "^29.7.0",
         "@semantic-release/git": "^10.0.1",
         "@swc/jest": "^0.2.36",
