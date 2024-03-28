@@ -91,8 +91,8 @@
         "javascript-time-ago": "2.5.9"
     },
     "devDependencies": {
-        "@andrao/eslint": "*",
-        "@andrao/prettier": "*",
+        "@andrao/eslint": "^1.0.1",
+        "@andrao/prettier": "^1.0.1",
         "@andrao/tsconfig": "^1.0.0",
         "@jest/globals": "^29.7.0",
         "@semantic-release/git": "^10.0.1",

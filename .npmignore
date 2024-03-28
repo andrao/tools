@@ -6,8 +6,13 @@ src
 # dev
 .github
 .husky
+.nvmrc
 .vscode
 .prettierignore
 jest.config.js
 tsconfig.json
 tsconfig.tsbuildinfo
+
+# tests
+*.test.d.ts
+*.test.js

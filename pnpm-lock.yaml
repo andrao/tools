@@ -17,10 +17,10 @@ dependencies:
 
 devDependencies:
   '@andrao/eslint':
-    specifier: '*'
-    version: 1.0.0(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
+    specifier: ^1.0.1
+    version: 1.0.1(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
   '@andrao/prettier':
-    specifier: '*'
+    specifier: ^1.0.1
     version: 1.0.1
   '@andrao/tsconfig':
     specifier: ^1.0.0
@@ -82,8 +82,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@andrao/eslint@1.0.0(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3):
-    resolution: {integrity: sha512-wUB7sCHVAMa1Q3KmvgYcQIXJYKfcKWH9Z+aTCg3+A5YBRKOyPbDlpH4ElTN9GLWnYT3VJgqu0KSW8RLJ7sgU+A==}
+  /@andrao/eslint@1.0.1(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3):
+    resolution: {integrity: sha512-ws+TgUxb0OXMHWCZuNYsqN1SLXTCl5iZ13106yFfzzWVoqvxxu/k7O4xsKQE3Y+RxIN9riD6hn6/8cNM7nSYmg==}
     dependencies:
       '@next/eslint-plugin-next': 14.1.4
       '@tanstack/eslint-plugin-query': 5.28.6(eslint@8.57.0)(typescript@5.4.3)
@@ -3670,6 +3670,18 @@ packages:
       path-scurry: 1.10.2
     dev: true
 
+  /glob@10.3.12:
+    resolution: {integrity: sha512-TCNv8vJ+xz4QiqTpfOJA7HvYv+tNIRHKfUWw/q+v2jdgN4ebz+KY9tGx5J4rHP0o84mNP+ApH66HRX8us3Khqg==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    hasBin: true
+    dependencies:
+      foreground-child: 3.1.1
+      jackspeak: 2.3.6
+      minimatch: 9.0.3
+      minipass: 7.0.4
+      path-scurry: 1.10.2
+    dev: true
+
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
     dependencies:
@@ -6617,7 +6629,7 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       commander: 4.1.1
-      glob: 10.3.10
+      glob: 10.3.12
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6

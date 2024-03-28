@@ -1,5 +1,8 @@
 # 🧰 @andrao/tools
 
+[![npm version](https://badge.fury.io/js/@andrao%2Ftools.svg)](https://badge.fury.io/js/@andrao/tools)
+![build](https://github.com/andrao/tools/workflows/CI/badge.svg)
+
 This repo contains a variety of lightweight server- and browser-compatible Typescript tools.
 
 | Function         | Description                                                               |
@@ -18,9 +21,9 @@ This repo contains a variety of lightweight server- and browser-compatible Types
 | `uriJoin`        | Like `path.join()` but maintains the `//` in `http(s)://`                 |
 | `uuid`           | Generate a v4 UUID                                                        |
 
-It also contains a two query-string tools:
+It also contains two dependency-free query-string tools:
 
-| Function                           | Description                                     |
-| ---------------------------------- | ----------------------------------------------- |
-| `querystring/parseQueryString`     | Dependency-free query parameter parsing         |
-| `querystring/stringifyQueryParams` | Dependency-free query parameter stringification |
+| Function                           | Description                     |
+| ---------------------------------- | ------------------------------- |
+| `querystring/parseQueryString`     | Query parameter parsing         |
+| `querystring/stringifyQueryParams` | Query parameter stringification |
