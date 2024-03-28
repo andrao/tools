@@ -50,7 +50,7 @@ export function capitalize<T extends string, S extends TCapitalizationFormat>(
     input: T,
     input_style?: S,
 ): CapitalizePhrase<T, S> {
-    const style = input_style || 'first-word';
+    const style = input_style ?? 'first-word';
 
     return input
         .split(' ')
