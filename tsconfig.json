@@ -1,8 +1,6 @@
 {
-    "extends": "@andrao/tsconfig/base.json",
+    "extends": "@andrao/tsconfig/module.json",
     "compilerOptions": {
-        "declaration": true,
-        "noEmit": false,
         "outDir": "./dist",
         "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
     },

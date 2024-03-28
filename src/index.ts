@@ -4,6 +4,7 @@ export * from './clone';
 export * from './deepEqual';
 export * from './isError';
 export * from './querystring';
+export * from './retry';
 export * from './safe';
 export * from './timeAgo';
 export * from './timeoutPromise';
