@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^1.0.1
     version: 1.0.1(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
   '@andrao/prettier':
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.0.2
+    version: 1.0.2
   '@andrao/tsconfig':
     specifier: ^1.0.0
     version: 1.0.0
@@ -111,8 +111,8 @@ packages:
       - typescript
     dev: true
 
-  /@andrao/prettier@1.0.1:
-    resolution: {integrity: sha512-1nI0QUI69knCYA5FbeJPqTIvynLXCQNUh5Ck6c6QzMejvKJ4HYJ3Ea9bARRcmjyIpjdps5uFh8V1El/GLONS0g==}
+  /@andrao/prettier@1.0.2:
+    resolution: {integrity: sha512-5S+ayhLg4EeDb3NUad5jDsfld1E1mmTEv7+SQMruXUPWuaOY5zMVkv2H5Aze6PARs9z+6KUeaYzKrhe5eQhVhw==}
     hasBin: true
     dependencies:
       '@andrao/tailwind': 1.1.0
