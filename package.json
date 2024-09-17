@@ -88,7 +88,7 @@
     "dependencies": {
         "clone": "2.1.2",
         "fast-deep-equal": "3.1.3",
-        "javascript-time-ago": "2.5.9"
+        "javascript-time-ago": "2.5.11"
     },
     "devDependencies": {
         "@andrao/eslint": "^2.1.0",
