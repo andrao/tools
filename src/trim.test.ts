@@ -1,9 +1,6 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import { trim } from './trim';
 
-/**
- * Tests
- */
 describe(trim.name, () => {
     it(`trims an input string`, () => {
         expect(

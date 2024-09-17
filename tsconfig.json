@@ -4,6 +4,6 @@
         "outDir": "./dist",
         "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
     },
-    "include": ["src", "__integration_tests__/**.ts"],
+    "include": ["src", "__integration_tests__/**.ts", "vitest.config.ts"],
     "exclude": ["node_modules"]
 }
