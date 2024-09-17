@@ -1,23 +1,19 @@
-import { beforeAll, jest } from '@jest/globals';
+import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
+import { retry, TIMEOUT_ERROR_MESSAGE } from './retry';
 import { timeoutPromise } from './timeoutPromise';
 
 /**
  * Mocks, globals
  */
-const MOCK_FN = jest.fn(() => Promise.resolve('resolved'));
-
-/**
- * Import dependencies
- */
-const { retry, TIMEOUT_ERROR_MESSAGE } = await import('./retry');
+const MOCK_FN = vi.fn(() => Promise.resolve('resolved'));
 
 /**
  * Setup
  */
 beforeAll(() => {
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'warn').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 
 /**

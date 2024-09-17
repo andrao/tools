@@ -1,9 +1,6 @@
-import { expect } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import { uuid } from './uuid';
 
-/**
- * Tests
- */
 describe(uuid.name, () => {
     it(`generates a uuid`, () => {
         expect(uuid()).toMatch(
