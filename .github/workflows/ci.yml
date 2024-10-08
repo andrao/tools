@@ -14,71 +14,77 @@ concurrency:
 jobs:
     audit:
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            issues: write
+            pull-requests: write
         steps:
+            # --- Start setup --- #
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
               with:
                   ignore-scripts: true
+            # --- End setup --- #
 
-            # Run
-            - name: Audit
+            - name: Audit dependencies
               run: pnpm audit
 
     format:
         needs: audit
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
         steps:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
               with:
                   ignore-scripts: true
-
-            # Run
             - name: Format
               run: pnpm format
 
     lint:
         needs: audit
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
         steps:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
               with:
                   ignore-scripts: true
-
-            # Run
             - name: Lint
               run: pnpm lint
 
     test:
         needs: audit
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
         steps:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
               with:
                   ignore-scripts: true
-
-            # Run
             - name: Test
-              run: pnpm test:i
+              run: pnpm test
 
     typecheck:
         needs: audit
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
         steps:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
               with:
                   ignore-scripts: true
-
-            # Run
             - name: Typecheck
               run: pnpm typecheck
 
     release:
         if: github.event_name == 'push'
         needs:
+            - audit
             - format
             - lint
             - test
@@ -94,8 +100,8 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - uses: ./.github/actions/install-dependencies
-
-            # Release
+              with:
+                  ignore-scripts: true
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
