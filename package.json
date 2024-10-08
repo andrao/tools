@@ -14,35 +14,23 @@
     "type": "module",
     "exports": {
         ".": "./dist/index.js",
-        "./querystring": "./dist/querystring/index.js",
-        "./asyncInterval": "./dist/asyncInterval.js",
-        "./capitalize": "./dist/capitalize.js",
-        "./clone": "./dist/clone.js",
-        "./deepEqual": "./dist/deepEqual.js",
-        "./index": "./dist/index.js",
-        "./isError": "./dist/isError.js",
-        "./safe": "./dist/safe.js",
-        "./retry": "./dist/retry.js",
-        "./timeAgo": "./dist/timeAgo.js",
-        "./timeoutPromise": "./dist/timeoutPromise.js",
-        "./trim": "./dist/trim.js",
-        "./uncapitalize": "./dist/uncapitalize.js",
-        "./uriJoin": "./dist/uriJoin.js",
-        "./uuid": "./dist/uuid.js"
+        "./*": "./dist/*.js"
     },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
     "scripts": {
         "build": "rm -rf ./dist && tsc --tsBuildInfoFile ./dist/tsconfig.tsbuildinfo",
-        "format": "andrao-prettier --check .",
-        "format:fix": "andrao-prettier --write .",
+        "format": "pnpm exec prettier --check $PWD",
+        "format:fix": "pnpm exec prettier --write .",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "prepack": "pnpm run build",
         "prepare": "husky",
-        "test": "vitest run",
-        "test:i": "RUN_JEST_INTEGRATION_TESTS=1 vitest run",
-        "test:watch": "vitest watch",
-        "typecheck": "tsc --noEmit",
-        "vitest": "vitest run"
+        "test": "vitest run .",
+        "typecheck": "tsc --noEmit"
     },
     "config": {
         "commitizen": {
