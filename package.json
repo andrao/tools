@@ -22,7 +22,7 @@
         "README.md"
     ],
     "scripts": {
-        "build": "rm -rf ./dist && tsc --tsBuildInfoFile ./dist/tsconfig.tsbuildinfo",
+        "build": "rm -rf ./dist && rm -f node_modules/.cache/tsbuildinfo.build.json && tsc -p tsconfig.build.json",
         "format": "pnpm exec prettier --check $PWD",
         "format:fix": "pnpm exec prettier --write .",
         "lint": "eslint .",
